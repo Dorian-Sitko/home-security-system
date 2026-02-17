@@ -1,5 +1,7 @@
 #include <Keypad.h>
 #include <LiquidCrystal.h>
+#include <Adafruit_Fingerprint.h>
+
 
 // --- LCD Pins ---
 const int rs = 8, en = 9, d4 = 10, d5 = 11, d6 = 12, d7 = 13;
@@ -109,6 +111,7 @@ void readUltrasonic() {
   if (distance < 20) {
     lcd.setCursor(0, 0);
     lcd.print("Too Close!     ");
+    
   }
 
   delay(100);
